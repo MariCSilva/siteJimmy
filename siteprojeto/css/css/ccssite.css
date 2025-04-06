@@ -1,0 +1,23 @@
+h1,h2,p,ul,footer {
+    color: #c3e211; 
+}
+
+h1{
+    text-align:center ; font-size: 300%; font-family: 'Consolas'; background-color: #4c7683; line-height: 3;
+}
+
+p{
+    margin-left: 2%;margin-right: 2%; text-indent: 20px;
+}
+
+h2{
+    text-indent: 25px; font-family: 'Bahnschrift SemiBold Condensed';
+}
+
+img{
+    display: block; margin: auto; width: 20%;
+}
+
+body{
+    background-color: #202430;
+}
