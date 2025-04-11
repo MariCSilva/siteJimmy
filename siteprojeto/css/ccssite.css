@@ -1,0 +1,31 @@
+h1,h2,p,ul,footer {
+    color: #c3e211; 
+}
+
+h1{
+    text-align:center ; font-size: 300%; font-family: 'Consolas'; background-color: #4c7683; line-height: 2;
+}
+
+p{
+    text-align: justify ; margin-left: 2%;margin-right: 2%; text-indent: 20px;
+}
+
+h2{
+    text-indent: 25px; font-family: 'Bahnschrift SemiBold Condensed'; 
+}
+
+img{
+    display: block; margin: auto; width: 30%;
+}
+
+body{
+    background-color: #202430;
+}
+
+a{
+    text-decoration: underline; color: #5de900;
+}
+
+a:visited {
+    color: #9400e9;
+}
