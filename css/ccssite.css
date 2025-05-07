@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #4c7683;
+    padding: 20px 20px 20px 20px; 
+    width: 100%;
+    top: 0;
+}
+
+nav  ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+nav ul li{
+    margin-left: 20px;
+}
+
+nav ul li a{
+    color:#043847; text-decoration: none;
+}
+
+a:hover{
+    color: aliceblue;
+}
+
+
+h1,h2,p,ul,footer {
+    color: #c3e211; 
+    font-size: 120%
+}
+
+h1{
+    text-align:center ; font-size: 300%; font-family: 'Consolas'; background-color: #4c7683; line-height: 2; text-shadow: 2px 2px black; 
+}
+
+p{
+    text-align: justify ; margin-left: 2%;margin-right: 2%; text-indent: 20px;
+}
+
+h2{
+    text-indent: 25px; font-family: 'Agency FB'; text-align: center; font-size: 180%; margin-bottom: 15px;
+}
+
+ul{
+    justify-content: center; margin-left: 60px; font-size: 130%; 
+
+}
+
+img{
+    display: block; margin: auto; width: 30%;
+}
+
+body{
+    background-color: #202430;
+}
+
+a{
+    text-decoration: underline; color: #69ddfd;
+}
+
+.topico{
+    margin-top: 20px;
+}
+
+header .container{
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.logo{
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Solid;
+}
+
+.banner{
+    background:url(../img/banner.jpg) no-repeat center/cover;
+    height: 400px
+
+}
+
+#progresso{
+    padding: 35px
+}
+
+.progresso-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.progresso-texto{
+    flex: 1;
+    padding: 20px;
+}
+
+.hex-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    flex: 1;
+}
+
+.hex{
+    width: 140px;
+    height: 120px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+    overflow: hidden;
+    position: relative;
+
+}
+
+.hex img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+
+
+
+@media (max-width:728px){
+    header .container, .progresso-container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width:675px){
+    nav ul{
+        justify-content: center;
+    }
+}
+
+@media (max-width:675px){
+    img{
+        width: 50%
+    }
+}
