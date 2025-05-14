@@ -142,9 +142,55 @@ header .container{
 .personagem {
     margin-left: 60px;
     margin-right: 30px;
+    margin-bottom: 40px;
 
 }
 
+#acao .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#acao .item {
+    background-color: white;
+    border: 3px solid rgb(160, 54, 209);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    cursor: pointer;
+
+} 
+
+#acao .item:hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    
+}
+
+#acao .item:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+
+}
+
+#acao .item p {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #461183;
+
+}
+
+#acao .imagem img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+
+}
 
 @media (max-width:728px){
     header .container, .progresso-container{
