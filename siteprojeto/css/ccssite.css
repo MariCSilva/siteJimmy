@@ -30,7 +30,7 @@ nav ul li a{
 }
 
 a:hover{
-    color: aliceblue;
+    color: rgb(166, 190, 211);
 }
 
 
@@ -64,8 +64,8 @@ body{
     background-color: #202430;
 }
 
-a{
-    text-decoration: underline; color: #69ddfd;
+#contato .link{
+    text-decoration: underline; color: #217a92;
 }
 
 .topico{
@@ -190,6 +190,33 @@ header .container{
     height: auto;
     margin-bottom: 10px;
 
+}
+
+/*modal*/
+
+.card{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: #c3e211;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.card h3{
+    margin-top: 0;
+}
+
+.bnt{
+    display:inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #461183;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 @media (max-width:728px){
