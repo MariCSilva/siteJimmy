@@ -363,6 +363,10 @@ section{
         text-align: center;
     }
 
+    .container{
+        padding: 5px;
+    }
+
     nav ul{
         flex-direction: column;
     }
@@ -390,4 +394,19 @@ section{
     } 
 
     
+}
+
+@media (max-width:300px){
+    .banner h1, .banner h2{
+        font-size:2em;
+    }
+
+    .banner{
+        margin-top: 100px;
+    }
+
+    .container{
+        font-size:0.8em;
+        padding: 10px;
+    }    
 }
