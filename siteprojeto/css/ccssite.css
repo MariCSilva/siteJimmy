@@ -149,6 +149,18 @@ header .container{
     
 }
 
+.banner2{
+    background:url(../img/jimmy.png) no-repeat center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: flex-start;
+    justify-content: center;
+    text-shadow: 3px 3px  #000000;
+    
+}
+
 #progresso{
     padding: 35px
 }
