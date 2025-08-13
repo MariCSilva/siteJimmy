@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimmy</title>
-    <link rel="stylesheet" type="text/css" href="css/ccssite.css">
+    <link rel="stylesheet" type="text/css" href="css/csssite.css">
     <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
 <body>
     <header>
         <div class="container">
-            <div>
-                <a class="logo" href="meusite.html">LOGO</a>
+            <div class="logo">
+                <a class="logo" href="meusite.html"><img class="logo" src="img/logo.png" alt=""></a>
             </div>
             <nav>
                 <ul>
@@ -33,13 +33,81 @@
     </section>
     <hr>
     <main>
-        <section id="topico">
+        <section>
             <h2>feedback</h2>
+            <form class="formulario" action="https://formsubmit.co/mariana.casilva0633@gmail.com" method="post">
+                <div class="forms">
+                  <label for="nome">Diga seu Nome</label>  
+                  <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="forms">
+                    <label for="idade">Qual a sua idade?</label>
+                    <input type="number" id="idade" name="idade" min="12" max="120">
+                </div>
+
+                <div class="forms">
+                    <label>Seu gênero:</label>
+                    <input type="radio" name="genero" value="feminino"> Feminino
+                    <input type="radio" name="genero" value="masculino"> Masculino
+                    <input type="radio" name="genero" value="outro"> Outro
+                </div>
+
+                <div class="forms">
+                    <label for="email">Coloque o seu Email para receber as novidades!</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="forms">
+                    <label for="data">Que dia você conheceu nosso projeto?</label>
+                    <input type="date" id="data" name="data">
+                </div>
+
+                <div class="forms">
+                    <label for="personagem">Qual dos personagens você gostou mais até agora?</label>
+                    <select id="personagem" name="personagem">
+                        <option value="jimmyl">Jim Lewis</option>
+                        <option value="joeyl">Joey Lewis</option>
+                        <option value="wm">Wyatt Martinez</option>
+                        <option value="ns">Nikola Suriya</option>
+                    </select>
+                </div> 
+
+                <div class="forms">
+                    <label>Qual desses tipos de midia você consome?</label>
+                    <input type="checkbox" name="uso[]" value="serie"> Séries
+                    <input type="checkbox" name="uso[]" value="comicsmanga"> Comics / Manga
+                    <input type="checkbox" name="uso[]" value="filmes"> Filmes
+                    <input type="checkbox" name="uso[]" value="jogos"> Jogos
+                </div>
+
+                <div class="forms">
+                    <label for="mensagem">Deixe opiniões, ideias ou uma mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                </div>
+
+                <div class="forms">
+                    <label for="myfile">Envie sua fanart :D</label>
+                    <input type="file" id="myfile" name="myfile">                    
+                </div>
+
+                <div class="forms">
+                    <label>De 0 a 10, quanto você gostou do projeto?</label>
+                    <input type="range" min="0" max="10" name="interesse">
+                </div>
+            
+                <div class="forms">
+                    <button type="submit" class="btn">Enviar!</button>
+                    <input type="hidden" name="_captcha" value="false"> 
+                    <input type="hidden" name="_next" value="https://maricsilva.github.io/siteJimmy/siteprojeto/sucessoenvio.html">       
+                                            
+                </div>
+            </form>
         </section>
     </main> 
-        <hr>
-        <footer>
-            <mark>Desenvolvido por Mari. Todos os textos e imagens de autoria minha</mark>
-        </footer>
+    <hr>
+    <footer>
+        <mark>Desenvolvido por Mari. Todos os textos e imagens de autoria minha</mark>
+    </footer>
 </body>
 </html> 
