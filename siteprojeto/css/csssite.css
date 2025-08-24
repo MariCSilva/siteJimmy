@@ -327,12 +327,60 @@ header .container{
     color: #98b614;
 }
 
-.form button{
+.forms button{
     color: #461183;
 }
 
 input[type="range"]{
     accent-color: #9de000;
+}
+
+.containertabela{
+    max-width: 12000;
+    margin: auto;
+}
+
+.tabela-container{
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.tabela-container table{
+    min-width: 600px;
+
+}
+
+.tabela{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #4c7683;
+    color: #c3e211;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela td, .tabela th{
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+}
+
+.tabela thead, .tabela th{
+    background-color: #523574;
+    color: #000;
+    font-weight: bold;
+}
+
+.tabela tbody tr:hover{
+    background-color: #689cac;
+}
+
+.tabela tbody tr:last-child td{
+    border-bottom: #000;
 }
 
 .modal{
