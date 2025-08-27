@@ -493,6 +493,13 @@ button:hover {
     background-color: #7741b4;
 }
 
+@media (max-width: 400px){
+      #puzzle {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(3, 70px);
+      }        
+    }
+
 @media (max-width:728px){
     header .container, .progresso-container{
         flex-direction: column;
