@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy</title>
+    <link rel="stylesheet" type="text/css" href="css/csssite.css">
+    <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <title>Quebra-Cabeça 12 Peças</title>
+  <style>
+    .piece {
+      width: 100px;
+      height: 100px;
+      background-image: url(img/nikorebaixado.jpg); 
+      background-size: 400px 300px;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+      <header>
+        <div class="container">
+            <div class="logo">
+                <a class="logo" href="meusite.html"><img class="logo" src="img/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="meusite.html#oquee">O que é</a></li>
+                    <li><a href="meusite.html#progresso">História</a></li>
+                    <li><a href="meusite.html#historia">Personagens</a></li>
+                    <li><a href="meusite.html#contato">Perfil</a></li>
+                    <li><a href="jogo.html">Puzzle</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>           
+    <section id="oquee" class="banner">
+        <h1>Projeto fim do mundo</h1>
+        <h2 class="destaque">Jogue um joguinho!</h2>        
+    </section>
+    <hr>
+
+    <div class="puzzlebody" >
+      <h1>Quebra-Cabeça 12 Peças</h1>
+      <p>Arraste as peças para montar a imagem!</p>
+      <button id="shuffleBtn">🔄 Embaralhar novamente</button>
+      <div id="puzzle"></div>
+      <p id="mensagem" style="font-weight:bold; color:rgb(107, 13, 230); margin-top:15px;"></p>
+    </div>
+    <hr>
+    <footer>
+      <mark>Desenvolvido por Mari. Todos os textos e imagens de autoria minha</mark>
+    </footer>
+  <script>
+    const puzzle = document.getElementById("puzzle");
+    const mensagem = document.getElementById("mensagem");
+    const shuffleBtn = document.getElementById("shuffleBtn");
+    let pieces = [];
+
+    // Criar as peças com suas posições corretas
+    for (let row = 0; row < 3; row++) {
+      for (let col = 0; col < 4; col++) {
+        const index = row * 4 + col;
+        const piece = document.createElement("div");
+        piece.classList.add("piece");
+        piece.style.backgroundPosition = `-${col * 100}px -${row * 100}px`;
+        piece.setAttribute("draggable", true);
+        piece.dataset.correct = index;
+        pieces.push(piece);
+      }
+    }
+
+    // Função para embaralhar
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Renderizar peças embaralhadas
+    function renderPuzzle() {
+      puzzle.innerHTML = "";
+      mensagem.textContent = "";
+      const shuffled = shuffle([...pieces]);
+      shuffled.forEach(piece => puzzle.appendChild(piece));
+    }
+
+    // Primeira renderização
+    renderPuzzle();
+
+    let dragged;
+
+    puzzle.addEventListener("dragstart", e => {
+      dragged = e.target;
+    });
+
+    puzzle.addEventListener("dragover", e => {
+      e.preventDefault();
+    });
+
+    puzzle.addEventListener("drop", e => {
+      if (e.target.classList.contains("piece")) {
+        let temp = document.createElement("div");
+        puzzle.insertBefore(temp, dragged);
+        puzzle.insertBefore(dragged, e.target);
+        puzzle.insertBefore(e.target, temp);
+        puzzle.removeChild(temp);
+        checkWin();
+      }
+    });
+
+    // Verificar vitória
+    function checkWin() {
+      const currentPieces = Array.from(puzzle.children);
+      const isCorrect = currentPieces.every((piece, index) => piece.dataset.correct == index);
+      if (isCorrect) {
+        mensagem.textContent = "🎉 Parabéns! Você completou o quebra-cabeça!";
+      }
+    }
+
+    // Botão de embaralhar
+    shuffleBtn.addEventListener("click", renderPuzzle);
+  </script>
+</body>
+</html>
+

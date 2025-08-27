@@ -328,7 +328,7 @@ header .container{
 }
 
 .forms button{
-    color: #461183;
+    color: #7ad821;
 }
 
 input[type="range"]{
@@ -459,6 +459,38 @@ section{
     position: relative;
     border: #461183 solid 3px;
     margin: 0;
+}
+
+.puzzlebody {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+    }
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    border: 3px solid #333;
+    background: #333;
+    margin-bottom: 15px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4b3792;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #7741b4;
 }
 
 @media (max-width:728px){
